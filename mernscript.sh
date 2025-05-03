@@ -10,6 +10,15 @@ fi
 
 cd "$project"
 
+echo "Initializing Git repository"
+git init
+echo "# $project" > README.md
+
+touch .gitignore
+
+echo -e "node_modules/\n.env\n.DS_Store" > .gitignore
+echo "Git repository initialized in $project"
+
 echo "Enter your backend directory name:"
 read name
 mkdir -p "$name"
@@ -31,7 +40,8 @@ fi
 
 mkdir -p config database routes utils middleware models controllers helpers
 
-touch index.js
+touch index.js .env
+echo -e "node_modules/\n.env\n.DS_Store" > .gitignore
 echo "folder structure created"
 cd ..
 
@@ -50,9 +60,19 @@ cd "$project_name" || exit
 
 echo "Installing dependencies..."
 npm install
+
+echo -e "node_modules/\n.env\n.DS_Store" > .gitignore
+
 cd ..
+
 echo "Vite + React project '$project_name' is ready!"
+
+echo "Adding changes to git..."
+git add .
+git commit -m "Initialized frontend and backend"
+
 echo "Run your frontend with:"
 echo "cd $project/$project_name && npm run dev"
 echo "Run your backend with:"
 echo "cd $project/$name && node index.js" 
+echo "Git repository initialized at: $project/.git"
