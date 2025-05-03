@@ -33,7 +33,7 @@ if [ $? -eq 0 ]; then
         echo "npm init successful. Installing express..."
         npm install express
         echo "installing mongoose..."
-        npm install mogoose
+        npm install mongoose
         echo "installing dotenv..."
         npm install dotenv
         echo "installing cors..."
