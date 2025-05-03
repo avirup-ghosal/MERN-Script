@@ -32,6 +32,12 @@ npm init -y
 if [ $? -eq 0 ]; then
         echo "npm init successful. Installing express..."
         npm install express
+        echo "installing mongoose..."
+        npm install mogoose
+        echo "installing dotenv..."
+        npm install dotenv
+        echo "installing cors..."
+        npm install cors
 else
         echo "npm init failed."
         exit 1
