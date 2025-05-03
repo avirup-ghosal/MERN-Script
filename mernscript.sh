@@ -53,6 +53,6 @@ npm install
 cd ..
 echo "Vite + React project '$project_name' is ready!"
 echo "Run your frontend with:"
-echo "cd $project_name && npm run dev"
+echo "cd $project/$project_name && npm run dev"
 echo "Run your backend with:"
-echo "cd $name && node index.js" 
+echo "cd $project/$name && node index.js" 
