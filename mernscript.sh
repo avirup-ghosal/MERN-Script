@@ -1,5 +1,11 @@
 #!/bin/bash
 
+########################
+# Author: Avirup Ghosal
+# Date: 30/5/2025
+# Description: This script initializes a MERN stack project with a Node.js backend and a Vite + React frontend.
+# Version: 1.0
+########################
 echo "Enter your project name:"
 read project
 if [ -d "$project" ]; then
